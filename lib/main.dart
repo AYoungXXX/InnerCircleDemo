@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dynamic_clock2/dynamic_widget.dart';
-import 'package:flutter_dynamic_clock2/home_page.dart';
+import 'package:flutter_dynamic_clock2/inner_wheel_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +25,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const Scaffold(
+        body: InnerWheelWidget(
+          size: 200,
+        ),
+      ),
     );
   }
 }
